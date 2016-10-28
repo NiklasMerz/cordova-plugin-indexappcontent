@@ -93,3 +93,17 @@ window.plugins.indexAppContent.setIndexingInterval(60, function() {
         // Handle error
     });
 ```
+
+### Disable indexing interval
+
+Call ``window.plugins.indexAppContent.disableIndexingInterval(success, error)`` to disable the interval for how often indexing should be allowed.
+
+Example:
+
+```
+window.plugins.indexAppContent.disableIndexingInterval(function() {
+        // Console.log('Successfully set interval');
+    }, function(error) {
+        // Handle error
+    });
+```
