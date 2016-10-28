@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-in-app-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "FORK in Development: Enable on-device searchable app content indexing.",
   "cordova": {
     "id": "cordova-plugin-in-app-search",
