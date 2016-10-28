@@ -28,6 +28,6 @@
   "author": "Niklas Merz <nilkasmerz@gmx.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NiklasMerz/cordova-plugin-indexappcontent/tree/custom-build/issues"
+    "url": "https://github.com/NiklasMerz/cordova-plugin-indexappcontent/issues"
   }
 }
