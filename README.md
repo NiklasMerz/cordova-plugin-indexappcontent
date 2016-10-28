@@ -1,3 +1,9 @@
+# FORK OF https://github.com/johanblomgren/cordova-plugin-indexappcontent.git
+This is a (maybe temporary) fork of the original index plugin for cordova. It has some additional features and some experiments with android. Mostly this is for an more convient installation if you need these features:
+
+* Delete items from index by their id
+* Disable interval restriction
+
 ## Installation
  Install using ``cordova`` CLI.
  * Run ``cordova plugin add https://github.com/johanblomgren/cordova-plugin-indexappcontent.git``
