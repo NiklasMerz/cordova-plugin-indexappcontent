@@ -18,6 +18,10 @@ IndexAppContent.prototype.setIndexingInterval = function (interval, onSuccess, o
 	exec(onSuccess, onError, "IndexAppContent", "setIndexingInterval", [interval]);
 };
 
+IndexAppContent.prototype.disableIndexingInterval = function (onSuccess, onError) {
+	exec(onSuccess, onError, "IndexAppContent", "disableIndexingInterval", []);
+};
+
 if (!window.plugins) {
 	window.plugins = {};
 }

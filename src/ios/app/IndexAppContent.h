@@ -21,5 +21,6 @@ UIKIT_EXTERN NSString *kIndexAppContentExecutionDelayKey;
 - (void)setItems:(CDVInvokedUrlCommand *)command;
 - (void)clearItemsForDomains:(CDVInvokedUrlCommand *)command;
 - (void)setIndexingInterval:(CDVInvokedUrlCommand *)command;
+- (void)disableIndexingInterval:(CDVInvokedUrlCommand *)command;
 
 @end
