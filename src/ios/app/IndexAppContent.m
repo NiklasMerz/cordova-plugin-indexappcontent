@@ -124,7 +124,6 @@ NSString *kIndexAppContentExecutionDelayKey = @"kIndexAppContentExecutionDelayKe
     }];
 }
 
-<<<<<<< HEAD
 - (void)disableIndexingInterval:(CDVInvokedUrlCommand *)command
 {
     NSInteger interval = -1;
@@ -134,7 +133,8 @@ NSString *kIndexAppContentExecutionDelayKey = @"kIndexAppContentExecutionDelayKe
     } else {
         [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR] callbackId:command.callbackId];
     }
-=======
+}
+
 - (void)clearItemsForIdentifiers:(CDVInvokedUrlCommand *)command
 {
     NSArray *identifiers = [command.arguments firstObject];
@@ -149,7 +149,6 @@ NSString *kIndexAppContentExecutionDelayKey = @"kIndexAppContentExecutionDelayKe
             [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
         }
     }];
->>>>>>> origin/delete-with-identifiers
 }
 
 - (void)setIndexingInterval:(CDVInvokedUrlCommand *)command
@@ -184,13 +183,10 @@ NSString *kIndexAppContentExecutionDelayKey = @"kIndexAppContentExecutionDelayKe
     NSDate *updatedAt = [self _getTimestamp];
     BOOL shouldUpdate = YES;
 
-<<<<<<< HEAD
     if([self _getIndexingInterval] == -1){
-      return shouldUpdate;
+        return shouldUpdate;
     }
 
-=======
->>>>>>> origin/delete-with-identifiers
     if (updatedAt && [updatedAt compare:[NSDate date]] == NSOrderedDescending) {
         NSLog(@"Will not update index. Last update: %@", updatedAt);
         shouldUpdate = NO;
