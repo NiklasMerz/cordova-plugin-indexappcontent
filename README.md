@@ -1,6 +1,12 @@
+# FORK OF johanblomgren/cordova-plugin-indexappcontent
+This is a (maybe temporary) fork of the original index plugin for cordova. It has some additional features and some experiments with android. Mostly this is for an more convenient installation if you need these features:
+
+* Remove items from index by their id
+* Disable interval restriction
+
 ## Installation
  Install using ``cordova`` CLI.
- * Run ``cordova plugin add https://github.com/johanblomgren/cordova-plugin-indexappcontent.git``
+ * Run ``cordova plugin add cordova-plugin-in-app-search``
 
 ## Usage
 Plugin should be installed on ``window.plugins.indexAppContent``.
@@ -80,6 +86,19 @@ window.plugins.indexAppContent.clearItemsForDomains(['com.my.domain', 'com.my.ot
 
 ```
 
+Call ``window.plugins.indexAppContent.clearItemsForIdentifiers(identifiers, success, error)`` to clear all items stored for a given array of identifiers.
+
+Example:
+
+```
+window.plugins.indexAppContent.clearItemsForIdentifiers(['id1', 'id2'], function() {
+    console.log('Items removed');
+    }, function(error) {
+        // Handle error
+    });
+
+```
+
 ### Set indexing interval
 
 Call ``window.plugins.indexAppContent.setIndexingInterval(interval, success, error)`` to configure the interval (in minutes) for how often indexing should be allowed.
@@ -89,6 +108,20 @@ Example:
 ```
 window.plugins.indexAppContent.setIndexingInterval(60, function() {
         // Console.log('Successfully set interval');
+    }, function(error) {
+        // Handle error
+    });
+```
+
+### Disable indexing interval
+
+Call ``window.plugins.indexAppContent.disableIndexingInterval(success, error)`` to disable the interval for how often indexing should be allowed.
+
+Example:
+
+```
+window.plugins.indexAppContent.disableIndexingInterval(function() {
+        // Console.log('Successfully unset interval');
     }, function(error) {
         // Handle error
     });
